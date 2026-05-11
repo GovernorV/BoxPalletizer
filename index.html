@@ -24,6 +24,16 @@
   --warn:#ffd36a;
   --radius:18px;
 }
+html.day-theme{
+  --bg:#f8fafc;
+  --card:#ffffff;
+  --line:#d8e0e7;
+  --text:#18202b;
+  --muted:#617082;
+  --accent:#0f766e;
+  --accent2:#355c8a;
+  --warn:#b37b18;
+}
 *{box-sizing:border-box}
 body{
   margin:0;
@@ -43,6 +53,10 @@ b{color:var(--text)}
   border:1px solid var(--line);
   border-radius:var(--radius);
   padding:28px;
+}
+html.day-theme .card{
+  background:#ffffff;
+  box-shadow:0 20px 60px rgba(24,32,43,.1);
 }
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:26px}
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
@@ -64,6 +78,9 @@ b{color:var(--text)}
 .btn.secondary{
   border:1px solid var(--line);
   color:var(--text);
+}
+html.day-theme .btn.secondary{
+  background:#ffffff;
 }
 img{width:100%;border-radius:16px;display:block}
 .badge{
@@ -101,6 +118,10 @@ a{color:inherit}
   background:rgba(11,18,32,.78);
   backdrop-filter: blur(10px);
   border-bottom:1px solid var(--line);
+}
+html.day-theme .topbar{
+  background:rgba(248,250,252,.92);
+  box-shadow:0 10px 30px rgba(24,32,43,.06);
 }
 .topbar .inner{
   display:flex; align-items:center; justify-content:space-between;
@@ -142,6 +163,9 @@ a{color:inherit}
   padding:8px 10px;
   font-weight:700;
   cursor:pointer;
+}
+html.day-theme .lang button{
+  background:#ffffff;
 }
 .lang button.active{
   border-color:transparent;
@@ -655,6 +679,13 @@ a{color:inherit}
   const mains = Array.from(document.querySelectorAll("main[data-lang]"));
   const tagline = document.getElementById("tagline");
 
+  function applyAutoTheme(){
+    const hour = new Date().getHours();
+    const isDay = hour >= 6 && hour < 18;
+    document.documentElement.classList.toggle("day-theme", isDay);
+    document.documentElement.classList.toggle("night-theme", !isDay);
+  }
+
   function setMetaForLang(lang){
     // Update <html lang="">
     document.documentElement.lang = lang;
@@ -708,6 +739,8 @@ a{color:inherit}
     if (h === "#ru") showLang(RU);
   });
 
+  applyAutoTheme();
+  setInterval(applyAutoTheme, 60 * 1000);
   showLang(detectInitialLang());
 })();
 </script>
