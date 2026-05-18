@@ -2,26 +2,26 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
-<title>Box Palletizer — расчет укладки коробок на паллеты</title>
+<title>Паллетировщик Box Palletizer — расчет укладки коробок на паллеты</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <meta name="description"
-      content="Box Palletizer рассчитывает оптимальную и устойчивую укладку коробок на поддоны: паллетизация, 3D-схема, нагрузка на нижние слои, отчеты PDF и Word.">
-<meta name="keywords" content="Box Palletizer, паллетизация, укладка коробок на паллету, расчет паллет, схема укладки, palletizing software, pallet stacking, manual palletizing, оптимизация паллет">
+      content="Паллетировщик Box Palletizer рассчитывает оптимальную и устойчивую укладку коробок на поддоны: паллетизация, 3D-схема, нагрузка на нижние слои, отчеты PDF и Word.">
+<meta name="keywords" content="Паллетировщик, Box Palletizer, паллетизация, укладка коробок на паллету, расчет паллет, схема укладки, palletizing software, pallet stacking, manual palletizing, оптимизация паллет">
 <meta name="author" content="Viktor Guberniev">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://governorv.github.io/BoxPalletizer/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Box Palletizer">
-<meta property="og:title" content="Box Palletizer — расчет укладки коробок на паллеты">
-<meta property="og:description" content="Программа для расчета паллетизации, устойчивой укладки, нагрузки на слои, 3D-схем и отчетов.">
+<meta property="og:title" content="Паллетировщик Box Palletizer — расчет укладки коробок на паллеты">
+<meta property="og:description" content="Программа-паллетировщик для расчета паллетизации, устойчивой укладки, нагрузки на слои, 3D-схем и отчетов.">
 <meta property="og:url" content="https://governorv.github.io/BoxPalletizer/">
 <meta property="og:image" content="https://governorv.github.io/BoxPalletizer/boxpalletizer-top-banner.png">
 <meta property="og:locale" content="ru_RU">
 <meta property="og:locale:alternate" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Box Palletizer — Pallet Stacking Software">
-<meta name="twitter:description" content="Optimal box stacking on pallets with 3D visualization, load checks and reports.">
+<meta name="twitter:title" content="Паллетировщик Box Palletizer — расчет укладки коробок">
+<meta name="twitter:description" content="Программа для расчета паллетизации, 3D-схем укладки, нагрузки на нижние слои и отчетов.">
 <meta name="twitter:image" content="https://governorv.github.io/BoxPalletizer/boxpalletizer-top-banner.png">
 <script type="application/ld+json">
 {
@@ -32,7 +32,7 @@
   "operatingSystem": "Windows",
   "url": "https://governorv.github.io/BoxPalletizer/",
   "image": "https://governorv.github.io/BoxPalletizer/boxpalletizer-top-banner.png",
-  "description": "Palletizing software for calculating optimal and stable box stacking on pallets with 3D visualization and reports.",
+  "description": "Паллетировщик для расчета оптимальной и устойчивой укладки коробок на поддоны с 3D-визуализацией, проверкой нагрузки и отчетами.",
   "author": {
     "@type": "Person",
     "name": "Viktor Guberniev"
@@ -255,9 +255,9 @@ html.day-theme .lang button{
   <section>
     <div class="container grid2">
       <div class="card">
-        <h1>Перестаньте терять деньги<br>на смятых коробах и рекламациях</h1>
+        <h1>Паллетировщик Box Palletizer<br>для расчета укладки коробок на паллеты</h1>
         <p>
-          <b>Box Palletizer</b> — программа для расчёта
+          <b>Box Palletizer</b> — программа-паллетировщик для расчёта
           <b>устойчивой и оптимальной укладки ящиков на поддон</b>
           при ручной паллетизации.
         </p>
@@ -272,6 +272,7 @@ html.day-theme .lang button{
 
         <div>
           <span class="badge">Ручная паллетизация</span>
+          <span class="badge">Паллетировщик</span>
           <span class="badge">Малый и средний бизнес</span>
           <span class="badge">Windows</span>
         </div>
@@ -777,9 +778,8 @@ html.day-theme .lang button{
       if (saved === EN || saved === RU) return saved;
     } catch(e) {}
 
-    // browser preference fallback
-    const nav = (navigator.language || "").toLowerCase();
-    return nav.startsWith("ru") ? RU : EN;
+    // The main public URL targets Russian search queries; English remains available via #en.
+    return RU;
   }
 
   btnRu.addEventListener("click", () => { showLang(RU); });
