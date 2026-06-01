@@ -211,12 +211,13 @@ html.day-theme .lang button{
   color:#071021;
 }
 .hidden{display:none !important;}
-.other-products .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:18px}
+.other-products .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:24px}
 .other-card{padding:0;overflow:hidden}
-.other-card img{width:100%;border-radius:0;aspect-ratio:4/3;object-fit:cover;display:block}
-.other-card .body{padding:18px}
-.other-card h3{font-size:18px}
-@media(max-width:900px){.other-products .cards{grid-template-columns:1fr}}
+.other-card img{width:100%;border-radius:0;aspect-ratio:16/10;object-fit:cover;display:block}
+.other-card .body{padding:22px}
+.other-card h3{font-size:20px}
+@media(max-width:1050px){.other-products .cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.other-products .cards{grid-template-columns:1fr}}
 @media(max-width:640px){
   .site-banner{height:140px}
 }
@@ -371,8 +372,8 @@ html.day-theme .lang button{
           </ul>
         </div>
 
-         <div class="card"><h3>3D-визуализация</h3><p>Понятная схема для работников склада. Четные и нечетные слои укладки отобрадаются разным цветом. 
-      Возможен поворот наждого слоя на 180 градусов относительно соседних слоев для более прочной укладки (связка слоев). 
+         <div class="card"><h3>3D-визуализация</h3><p>Понятная схема для работников склада. Четные и нечетные слои укладки отобрадаются разным цветом.
+      Возможен поворот наждого слоя на 180 градусов относительно соседних слоев для более прочной укладки (связка слоев).
 На схему можно добавить текстовый блок с параметрами оптимальной укладки. Схему можно скопировать в буфер обмена и вставить в любой офисный документ (Word, Excel, PowerPoint)</p></div>
       <div class="card">
   <h3>Отчёт Word с шаблоном пользователя</h3>
@@ -436,14 +437,14 @@ html.day-theme .lang button{
       <p>
         Скачайте презентацию программы (формат pps, 12 слайдов)
       </p>
-          
+
 
       <a class="btn primary" href="https://disk.yandex.ru/i/9GQRmaekVxZqSg" target="_blank">Скачать</a>
       <a class="btn secondary" href="mailto:vguberniev@gmail.com">Написать разработчику</a>
     </div>
   </section>
 
-      
+
   <section>
     <div class="container card">
       <h2>Скачайте демоверсию</h2>
@@ -452,7 +453,7 @@ html.day-theme .lang button{
         <b>Важно:</b> в демо-режиме к введённым значениям <b>добавляется случайная погрешность</b>,
         поэтому результаты носят ознакомительный характер.
       </p>
-        
+
 
       <a class="btn primary" href="https://disk.yandex.ru/d/d5Z1fkMeHXIGaA" target="_blank">Скачать демо</a>
       <a class="btn secondary" href="mailto:vguberniev@gmail.com">Написать разработчику</a>
@@ -465,13 +466,6 @@ html.day-theme .lang button{
       <h2>Познакомьтесь также с другими моими программами</h2>
       <div class="cards">
                 <article class="card other-card">
-          <a href="https://governorv.github.io/gost/" target="_blank" rel="noopener"><img src="gost914290_banner.png" alt="Расчет нагрузки на гофроящик по ГОСТ 9142-90"></a>
-          <div class="body">
-            <h3>Расчет нагрузки по ГОСТ 9142-90</h3>
-            <p>Расчет характеристик гофроящика, подбор марки гофрокартона и PDF-отчет.</p>
-            <a class="btn secondary" href="https://governorv.github.io/gost/" target="_blank" rel="noopener">Страница</a>
-          </div>
-        </article><article class="card other-card">
           <a href="https://governorv.github.io/BoxPriceCalculator/#ru" target="_blank" rel="noopener"><img src="boxprice_banner.png" alt="Калькулятор стоимости гофроящика"></a>
           <div class="body">
             <h3>Калькулятор стоимости гофроящика</h3>
@@ -501,6 +495,14 @@ html.day-theme .lang button{
             <h3>Раскройщик OptCutting</h3>
             <p>Оптимизация раскроя полотна гофрокартона, карты раскроя, сетевой график и отчеты Excel.</p>
             <a class="btn secondary" href="https://governorv.github.io/OptCutting/" target="_blank" rel="noopener">Страница</a>
+          </div>
+        </article>
+<article class="card other-card">
+          <a href="https://governorv.github.io/gost/" target="_blank" rel="noopener"><img src="gost914290_banner.png" alt="Расчет нагрузки на гофроящик по ГОСТ 9142-90"></a>
+          <div class="body">
+            <h3>Расчет нагрузки по ГОСТ 9142-90</h3>
+            <p>Расчет характеристик гофроящика, подбор марки гофрокартона и PDF-отчет.</p>
+            <a class="btn secondary" href="https://governorv.github.io/gost/" target="_blank" rel="noopener">Страница</a>
           </div>
         </article>
       </div>
@@ -634,7 +636,7 @@ html.day-theme .lang button{
 
         <div class="card">
           <h3>3D visualization</h3>
-          <p>A clear diagram for warehouse workers. Even and odd stacking layers are displayed in different colors. Each layer can be rotated 180 degrees relative to adjacent layers for more secure stacking (layer linking). 
+          <p>A clear diagram for warehouse workers. Even and odd stacking layers are displayed in different colors. Each layer can be rotated 180 degrees relative to adjacent layers for more secure stacking (layer linking).
                 A text block with optimal stacking parameters can be added to the diagram. The diagram can be copied to the clipboard and pasted into any office document (Word, Excel, PowerPoint).</p>
         </div>
 
@@ -704,13 +706,6 @@ html.day-theme .lang button{
       <h2>Explore my other software as well</h2>
       <div class="cards">
                 <article class="card other-card">
-          <a href="https://governorv.github.io/gost/" target="_blank" rel="noopener"><img src="gost914290_banner.png" alt="GOST 9142-90 Box Load Calculator"></a>
-          <div class="body">
-            <h3>GOST 9142-90 Load Calculator</h3>
-            <p>Corrugated box load, board grade calculation and PDF report export.</p>
-            <a class="btn secondary" href="https://governorv.github.io/gost/" target="_blank" rel="noopener">Page</a>
-          </div>
-        </article><article class="card other-card">
           <a href="https://governorv.github.io/BoxPriceCalculator/#en" target="_blank" rel="noopener"><img src="boxprice_banner_en.png" alt="Corrugated Box Cost Calculator"></a>
           <div class="body">
             <h3>Corrugated Box Cost Calculator</h3>
@@ -740,6 +735,14 @@ html.day-theme .lang button{
             <h3>OptCutting</h3>
             <p>Corrugated board cutting optimization with cutting maps, Gantt schedule and Excel reports.</p>
             <a class="btn secondary" href="https://governorv.github.io/OptCutting/?lang=en" target="_blank" rel="noopener">Page</a>
+          </div>
+        </article>
+<article class="card other-card">
+          <a href="https://governorv.github.io/gost/" target="_blank" rel="noopener"><img src="gost914290_banner.png" alt="GOST 9142-90 Box Load Calculator"></a>
+          <div class="body">
+            <h3>GOST 9142-90 Load Calculator</h3>
+            <p>Corrugated box load, board grade calculation and PDF report export.</p>
+            <a class="btn secondary" href="https://governorv.github.io/gost/" target="_blank" rel="noopener">Page</a>
           </div>
         </article>
       </div>
