@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://governorv.github.io/BoxPalletizer/</loc>
-    <lastmod>2026-06-02</lastmod>
+    <lastmod>2026-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -23,10 +23,15 @@
       <image:loc>https://governorv.github.io/BoxPalletizer/spiral4.jpg</image:loc>
       <image:title>3D-схема укладки коробок на паллету</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://governorv.github.io/BoxPalletizer/bundle-stacking-rus.png</image:loc>
+      <image:title>Укладка пачек гофроящиков на паллету</image:title>
+      <image:caption>Расчёт паллетизации пачек для производителей гофроупаковки</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://governorv.github.io/BoxPalletizer/?lang=en</loc>
-    <lastmod>2026-06-02</lastmod>
+    <lastmod>2026-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

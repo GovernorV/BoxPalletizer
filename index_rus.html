@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>Паллетировщик Box Palletizer — правильная укладка ящиков на поддон</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Паллетировщик Box Palletizer — программа для расчёта оптимальной и устойчивой укладки ящиков на поддон при ручной паллетизации.">
+<meta name="description" content="Паллетировщик Box Palletizer — программа для расчёта укладки ящиков с продукцией и пачек гофроящиков на поддон.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://governorv.github.io/BoxPalletizer/">
 <link rel="icon" href="boxpal.ico" type="image/x-icon">
@@ -112,6 +112,17 @@ img{width:100%;border-radius:16px;display:block}
   background:#000;
   padding:14px;
 }
+.audience-lead{max-width:900px;font-size:18px}
+.audience-card{position:relative;overflow:hidden}
+.audience-card::before{content:"";position:absolute;inset:0 auto 0 0;width:5px;background:linear-gradient(180deg,var(--accent),var(--accent2))}
+.audience-kicker{display:inline-block;margin-bottom:10px;color:var(--accent2);font-size:12px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+.bundle-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:22px 0}
+.bundle-step{padding:18px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.035)}
+.bundle-step strong{display:block;margin-bottom:6px}
+.bundle-shot{margin-top:24px}
+.bundle-note{margin-top:18px;padding:18px 20px;border:1px solid rgba(121,255,210,.28);border-radius:16px;background:rgba(121,255,210,.08)}
+@media(max-width:900px){.bundle-steps{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.bundle-steps{grid-template-columns:1fr}}
 
 footer{
   border-top:1px solid var(--line);
@@ -153,6 +164,7 @@ footer{
 </a>
 <a class="btn secondary" href="#price">Цены и условия</a>
 <a class="btn secondary" href="#damage">Почему это критично</a>
+<a class="btn secondary" href="#bundles">Укладка пачек</a>
 
       <div>
         <span class="badge">Ручная паллетизация</span>
@@ -217,6 +229,36 @@ footer{
     <div class="fullshot">
       <img src="spiral4.jpg" alt="Интерфейс программы Box Palletizer">
     </div>
+  </div>
+</section>
+
+<!-- BOXES AND BUNDLES -->
+<section id="bundles">
+  <div class="container">
+    <h2>Две задачи — для двух типов предприятий</h2>
+    <p class="audience-lead">Box Palletizer рассчитывает не только укладку готовой продукции. В программе есть отдельный режим для пачек сложенных гофроящиков — с другими исходными данными и результатами.</p>
+    <div class="grid2">
+      <article class="card audience-card">
+        <span class="audience-kicker">Потребителям упаковки</span>
+        <h3>Укладка ящиков с продукцией</h3>
+        <p>Эта задача подходит предприятиям, которые <b>покупают и используют упаковку</b>: производствам, фасовочным участкам, складам и дистрибьюторам.</p>
+        <p>Программа размещает заполненные ящики на поддоне, учитывает допустимую высоту и вес, свесы, ориентацию, устойчивость и нагрузку на нижние слои.</p>
+      </article>
+      <article class="card audience-card">
+        <span class="audience-kicker">Производителям упаковки</span>
+        <h3>Укладка пачек гофроящиков</h3>
+        <p>Эта задача предназначена для предприятий, которые <b>производят гофроупаковку</b> и отгружают сложенные ящики пачками.</p>
+        <p>Вводятся длина, ширина и высота пачки, количество ящиков в пачке и объём заказа. На выходе — число пачек и ящиков на поддоне, количество слоёв, габариты пакета и требуемое количество поддонов.</p>
+      </article>
+    </div>
+    <div class="bundle-steps" aria-label="Этапы расчёта укладки пачек">
+      <div class="bundle-step"><strong>1. Выберите режим</strong><p>«Пачки гофроящиков» вместо ящиков с продукцией.</p></div>
+      <div class="bundle-step"><strong>2. Задайте пачку</strong><p>Размеры пачки и количество сложенных ящиков в ней.</p></div>
+      <div class="bundle-step"><strong>3. Укажите ограничения</strong><p>Поддон, максимальную высоту, вес и допустимые свесы.</p></div>
+      <div class="bundle-step"><strong>4. Получите результат</strong><p>3D-схему, число пачек и изделий, PDF и Word-отчёты.</p></div>
+    </div>
+    <div class="fullshot bundle-shot"><img src="bundle-stacking-rus.png" alt="Расчёт укладки пачек гофроящиков в Box Palletizer"></div>
+    <div class="bundle-note"><b>Интеграция для производителя:</b> Palletizer PRO может получать параметры пачки и заказа непосредственно из программы «Раскройщик», выполнять расчёт и возвращать результат.</div>
   </div>
 </section>
 

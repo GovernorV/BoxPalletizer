@@ -6,8 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <meta name="description"
-      content="Паллетировщик Box Palletizer — Windows-программа для расчета оптимальной и устойчивой укладки коробок на паллеты: 3D-схема, нагрузка на нижние слои, паллетизация, отчеты PDF и Word.">
-<meta name="keywords" content="Паллетировщик, Box Palletizer, программа паллетизации, укладка коробок на паллету, расчет паллет, схема укладки коробок, расчет нагрузки на нижние слои, palletizing software, pallet stacking, manual palletizing, оптимизация паллет">
+      content="Паллетировщик Box Palletizer — Windows-программа для расчета укладки ящиков с продукцией и пачек гофроящиков на паллеты: 3D-схема, нагрузка, PDF и Word.">
+<meta name="keywords" content="Паллетировщик, Box Palletizer, программа паллетизации, укладка коробок на паллету, укладка пачек гофроящиков, паллетизация пачек, производители гофроупаковки, расчет паллет, схема укладки коробок, palletizing software, bundle palletizing, pallet stacking, manual palletizing, оптимизация паллет">
 <meta name="author" content="Viktor Guberniev">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <link rel="canonical" href="https://governorv.github.io/BoxPalletizer/">
@@ -17,7 +17,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="PackTuning Software">
 <meta property="og:title" content="Паллетировщик Box Palletizer — программа расчета укладки коробок">
-<meta property="og:description" content="Расчет паллетизации: оптимальная укладка коробок на поддон, 3D-схема, нагрузка на нижние слои, PDF и Word-отчеты.">
+<meta property="og:description" content="Расчет укладки ящиков с продукцией и пачек гофроящиков на поддон: 3D-схема, количество пачек и изделий, PDF и Word-отчеты.">
 <meta property="og:url" content="https://governorv.github.io/BoxPalletizer/">
 <meta property="og:image" content="https://governorv.github.io/BoxPalletizer/boxpalletizer-top-banner.png">
 <meta property="og:image:width" content="1568">
@@ -27,7 +27,7 @@
 <meta property="og:locale:alternate" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Паллетировщик Box Palletizer — программа расчета укладки коробок">
-<meta name="twitter:description" content="Windows-программа для расчета паллетизации, 3D-схем укладки, нагрузки на нижние слои и PDF/Word-отчетов.">
+<meta name="twitter:description" content="Windows-программа для укладки ящиков с продукцией и пачек гофроящиков: 3D-схемы и PDF/Word-отчеты.">
 <meta name="twitter:image" content="https://governorv.github.io/BoxPalletizer/boxpalletizer-top-banner.png">
 <meta name="twitter:image:alt" content="Box Palletizer software for pallet stacking calculation">
 <script type="application/ld+json">
@@ -265,6 +265,17 @@ img{width:100%;border-radius:16px;display:block}
   background:#000;
   padding:14px;
 }
+.audience-lead{max-width:900px;font-size:18px}
+.audience-card{position:relative;overflow:hidden}
+.audience-card::before{content:"";position:absolute;inset:0 auto 0 0;width:5px;background:linear-gradient(180deg,var(--accent),var(--accent2))}
+.audience-kicker{display:inline-block;margin-bottom:10px;color:var(--accent2);font-size:12px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+.bundle-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:22px 0}
+.bundle-step{padding:18px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.035)}
+.bundle-step strong{display:block;margin-bottom:6px}
+.bundle-shot{margin-top:24px}
+.bundle-note{margin-top:18px;padding:18px 20px;border:1px solid rgba(121,255,210,.28);border-radius:16px;background:rgba(121,255,210,.08)}
+@media(max-width:900px){.bundle-steps{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.bundle-steps{grid-template-columns:1fr}}
 footer{
   border-top:1px solid var(--line);
   padding:32px 0;
@@ -438,6 +449,7 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
         <a class="btn primary" href="https://mega.nz/file/WpIAiTRD#ALKEDjftp0NJJr70wjKfOxUuWR4e6igbRpLx_3mtdkk" target="_blank" rel="noopener">Скачать демоверсию</a>
         <a class="btn secondary" href="#ru-price">Цены и условия</a>
         <a class="btn secondary" href="#ru-damage">Почему это критично</a>
+        <a class="btn secondary" href="#ru-bundles">Укладка пачек</a>
 
         <div>
           <span class="badge">Ручная паллетизация</span>
@@ -498,6 +510,62 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
       <p style="margin-top:12px;color:var(--muted);font-size:13px">
         В интерфейсе отображаются как геометрические параметры укладки, так и расчётные показатели нагрузки и прочности по ГОСТ.
       </p>
+    </div>
+  </section>
+
+  <!-- BOXES AND BUNDLES -->
+  <section id="ru-bundles">
+    <div class="container">
+      <h2>Две задачи — для двух типов предприятий</h2>
+      <p class="audience-lead">
+        Box Palletizer рассчитывает не только укладку готовой продукции. В программе есть отдельный режим
+        для пачек сложенных гофроящиков — с другими исходными данными и результатами.
+      </p>
+
+      <div class="grid2">
+        <article class="card audience-card">
+          <span class="audience-kicker">Потребителям упаковки</span>
+          <h3>Укладка ящиков с продукцией</h3>
+          <p>
+            Эта задача подходит предприятиям, которые <b>покупают и используют упаковку</b>:
+            производствам, фасовочным участкам, складам и дистрибьюторам.
+          </p>
+          <p>
+            Программа размещает заполненные ящики на поддоне, учитывает допустимую высоту и вес,
+            свесы, ориентацию, устойчивость и нагрузку на нижние слои.
+          </p>
+        </article>
+
+        <article class="card audience-card">
+          <span class="audience-kicker">Производителям упаковки</span>
+          <h3>Укладка пачек гофроящиков</h3>
+          <p>
+            Эта задача предназначена для предприятий, которые <b>производят гофроупаковку</b>
+            и отгружают сложенные ящики пачками.
+          </p>
+          <p>
+            Вводятся длина, ширина и высота пачки, количество ящиков в пачке и объём заказа.
+            На выходе — число пачек и ящиков на поддоне, количество слоёв, габариты пакета
+            и требуемое количество поддонов.
+          </p>
+        </article>
+      </div>
+
+      <div class="bundle-steps" aria-label="Этапы расчёта укладки пачек">
+        <div class="bundle-step"><strong>1. Выберите режим</strong><p>«Пачки гофроящиков» вместо ящиков с продукцией.</p></div>
+        <div class="bundle-step"><strong>2. Задайте пачку</strong><p>Размеры пачки и количество сложенных ящиков в ней.</p></div>
+        <div class="bundle-step"><strong>3. Укажите ограничения</strong><p>Поддон, максимальную высоту, вес и допустимые свесы.</p></div>
+        <div class="bundle-step"><strong>4. Получите результат</strong><p>3D-схему, число пачек и изделий, PDF и Word-отчёты.</p></div>
+      </div>
+
+      <div class="fullshot bundle-shot">
+        <img src="bundle-stacking-rus.png" alt="Расчёт укладки пачек гофроящиков в Box Palletizer">
+      </div>
+
+      <div class="bundle-note">
+        <b>Интеграция для производителя:</b> Palletizer PRO может получать параметры пачки и заказа
+        непосредственно из программы «Раскройщик», выполнять расчёт и возвращать результат.
+      </div>
     </div>
   </section>
 
@@ -799,6 +867,7 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
         <a class="btn secondary" href="https://disk.yandex.ru/i/7dcdTSHqNQpzvQ" target="_blank" rel="noopener">View presentation</a>
         <a class="btn secondary" href="#en-pricing">Pricing</a>
         <a class="btn secondary" href="#en-damage">Why it matters</a>
+        <a class="btn secondary" href="#en-bundles">Bundle stacking</a>
 
         <div>
           <span class="badge">Manual palletizing</span>
@@ -858,6 +927,62 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
       <p style="margin-top:12px;color:var(--muted);font-size:13px">
         The interface displays both geometric stacking parameters and calculated load and strength values according to GOST standards.
       </p>
+    </div>
+  </section>
+
+  <!-- BOXES AND BUNDLES -->
+  <section id="en-bundles">
+    <div class="container">
+      <h2>Two palletizing tasks for two types of businesses</h2>
+      <p class="audience-lead">
+        Box Palletizer handles both filled shipping boxes and bundles of folded corrugated boxes.
+        Each mode uses the inputs and outputs that matter to its own workflow.
+      </p>
+
+      <div class="grid2">
+        <article class="card audience-card">
+          <span class="audience-kicker">For packaging users</span>
+          <h3>Stacking boxes with products</h3>
+          <p>
+            This task is designed for companies that <b>buy and use packaging</b>:
+            manufacturers, packing lines, warehouses and distributors.
+          </p>
+          <p>
+            The software places filled boxes on a pallet while respecting height and weight limits,
+            overhang, orientation, stability and the load on lower layers.
+          </p>
+        </article>
+
+        <article class="card audience-card">
+          <span class="audience-kicker">For packaging manufacturers</span>
+          <h3>Stacking bundles of corrugated boxes</h3>
+          <p>
+            This task is intended for companies that <b>manufacture corrugated packaging</b>
+            and ship folded boxes in bundles.
+          </p>
+          <p>
+            Enter bundle length, width and height, boxes per bundle and order quantity.
+            The result shows bundles and boxes per pallet, layer count, loaded pallet dimensions
+            and the total number of pallets required.
+          </p>
+        </article>
+      </div>
+
+      <div class="bundle-steps" aria-label="Bundle stacking calculation steps">
+        <div class="bundle-step"><strong>1. Select the mode</strong><p>Choose corrugated-box bundles instead of filled boxes.</p></div>
+        <div class="bundle-step"><strong>2. Define the bundle</strong><p>Enter bundle dimensions and the number of folded boxes.</p></div>
+        <div class="bundle-step"><strong>3. Set constraints</strong><p>Pallet size, maximum height and weight, and allowed overhang.</p></div>
+        <div class="bundle-step"><strong>4. Get the result</strong><p>3D layout, bundle and box totals, PDF and Word reports.</p></div>
+      </div>
+
+      <div class="fullshot bundle-shot">
+        <img src="bundle-stacking-rus.png" alt="Corrugated box bundle stacking calculation in Box Palletizer">
+      </div>
+
+      <div class="bundle-note">
+        <b>Manufacturer workflow:</b> Palletizer PRO can receive bundle and order parameters directly
+        from OptCutting, perform the calculation and return the result.
+      </div>
     </div>
   </section>
 
