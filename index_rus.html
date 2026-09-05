@@ -106,6 +106,26 @@ img{width:100%;border-radius:16px;display:block}
   padding:0;
 }
 .monitoring-shot img{border-radius:0;}
+.feature-shot-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+  margin:22px 0 0;
+}
+.feature-shot-grid figure{margin:0}
+.feature-shot-grid img{
+  border:1px solid var(--line);
+  background:#fff;
+  border-radius:14px;
+}
+.feature-shot-grid figcaption{
+  margin-top:8px;
+  color:var(--muted);
+  font-size:13px;
+}
+@media(max-width:900px){
+  .feature-shot-grid{grid-template-columns:1fr}
+}
 .fullshot{
   border-radius:20px;
   border:1px solid var(--line);
@@ -332,9 +352,9 @@ footer{
     <li>тип и марка гофрокартона</li>
   </ul>
 </div>
-      <div class="card"><h3>3D-визуализация</h3><p>Понятная схема для работников склада. Четные и нечетные слои укладки отобрадаются разным цветом. 
-      Возможен поворот наждого слоя на 180 градусов относительно соседних слоев для более прочной укладки (связка слоев). 
-На схему можно добавить текстовый блок с параметрами оптимальной укладки. Схему можно скопировать в буфер обмена и вставить в любой офисный документ (Word, Excel, PowerPoint)</p></div>
+      <div class="card"><h3>3D-визуализация</h3><p>Понятная схема для работников склада. Четные и нечетные слои укладки отображаются разным цветом.
+      Пользователь может выбрать цвета нечетных и четных слоев, а также цвет поддона через расширенную палитру. Возможен поворот каждого слоя на 180 градусов относительно соседних слоев для более прочной укладки (связка слоев).
+Новый режим просмотра слоев показывает один нечетный и один четный слой отдельно, без поддона и служебного текста. На схему можно добавить текстовый блок с параметрами оптимальной укладки. Схему можно скопировать в буфер обмена и вставить в любой офисный документ (Word, Excel, PowerPoint)</p></div>
       <div class="card">
   <h3>Отчёт Word с шаблоном пользователя</h3>
   <p>
@@ -368,6 +388,17 @@ footer{
 
     <div class="fullshot monitoring-shot">
         <img src="boxpalletizer-monitoring.jpg" alt="Palletizer PRO: режим дежурства и автоматический расчет по JSON">
+    </div>
+
+    <div class="feature-shot-grid" aria-label="Новые функции визуализации Box Palletizer">
+      <figure>
+        <img src="boxpalletizer-layer-colors-ru.png" alt="Настройка цветов слоев и поддона в Box Palletizer">
+        <figcaption>Настройка цветов нечетных и четных слоев, а также цвета поддона.</figcaption>
+      </figure>
+      <figure>
+        <img src="boxpalletizer-layer-view-ru.png" alt="Режим просмотра нечетного и четного слоя в Box Palletizer">
+        <figcaption>Режим просмотра слоев: нечетный и четный слой показаны отдельно.</figcaption>
+      </figure>
     </div>
 
     <div class="grid3">

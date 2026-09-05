@@ -70,6 +70,8 @@
         "Стандартная и спиральная схемы паллетизации",
         "Расчет нагрузки на нижние слои",
         "3D-визуализация паллеты",
+        "Настройка цветов слоев и поддона",
+        "Просмотр нечетного и четного слоя",
         "Паллетизация пачек гофроящиков",
         "PDF и Word-отчеты",
         "Многоязычный интерфейс",
@@ -259,6 +261,26 @@ img{width:100%;border-radius:16px;display:block}
   padding:0;
 }
 .monitoring-shot img{border-radius:0;}
+.feature-shot-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+  margin:22px 0 0;
+}
+.feature-shot-grid figure{margin:0}
+.feature-shot-grid img{
+  border:1px solid var(--line);
+  background:#fff;
+  border-radius:14px;
+}
+.feature-shot-grid figcaption{
+  margin-top:8px;
+  color:var(--muted);
+  font-size:13px;
+}
+@media(max-width:900px){
+  .feature-shot-grid{grid-template-columns:1fr}
+}
 .fullshot{
   border-radius:20px;
   border:1px solid var(--line);
@@ -609,9 +631,9 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
           </ul>
         </div>
 
-         <div class="card"><h3>3D-визуализация</h3><p>Понятная схема для работников склада. Четные и нечетные слои укладки отобрадаются разным цветом.
-      Возможен поворот наждого слоя на 180 градусов относительно соседних слоев для более прочной укладки (связка слоев).
-На схему можно добавить текстовый блок с параметрами оптимальной укладки. Схему можно скопировать в буфер обмена и вставить в любой офисный документ (Word, Excel, PowerPoint)</p></div>
+         <div class="card"><h3>3D-визуализация</h3><p>Понятная схема для работников склада. Четные и нечетные слои укладки отображаются разным цветом.
+      Пользователь может выбрать цвета нечетных и четных слоев, а также цвет поддона через расширенную палитру. Возможен поворот каждого слоя на 180 градусов относительно соседних слоев для более прочной укладки (связка слоев).
+Новый режим просмотра слоев показывает один нечетный и один четный слой отдельно, без поддона и служебного текста. На схему можно добавить текстовый блок с параметрами оптимальной укладки. Схему можно скопировать в буфер обмена и вставить в любой офисный документ (Word, Excel, PowerPoint)</p></div>
       <div class="card">
   <h3>Отчёт Word с шаблоном пользователя</h3>
   <p>
@@ -654,6 +676,17 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
 
       <div class="fullshot monitoring-shot">
         <img src="boxpalletizer-monitoring.jpg" alt="Palletizer PRO: режим дежурства и автоматический расчет по JSON">
+      </div>
+
+      <div class="feature-shot-grid" aria-label="Новые функции визуализации Box Palletizer">
+        <figure>
+          <img src="boxpalletizer-layer-colors-ru.png" alt="Настройка цветов слоев и поддона в Box Palletizer">
+          <figcaption>Настройка цветов нечетных и четных слоев, а также цвета поддона.</figcaption>
+        </figure>
+        <figure>
+          <img src="boxpalletizer-layer-view-ru.png" alt="Режим просмотра нечетного и четного слоя в Box Palletizer">
+          <figcaption>Режим просмотра слоев: нечетный и четный слой показаны отдельно.</figcaption>
+        </figure>
       </div>
 
       <div class="pt-language-card"><div class="pt-language-copy"><h2>Мультиязычный интерфейс</h2><p>Паллетировщик уже поставляется со словарями интерфейса для десяти языков. Переключение языка помогает внедрять программу в смешанных командах и на площадках с разными рабочими языками.</p><div class="pt-language-chips" aria-label="Поддерживаемые языки"><span class="pt-language-chip">Русский</span><span class="pt-language-chip">English</span><span class="pt-language-chip">Deutsch</span><span class="pt-language-chip">Français</span><span class="pt-language-chip" dir="rtl">עברית</span><span class="pt-language-chip">Italiano</span><span class="pt-language-chip">Қазақша</span><span class="pt-language-chip">Português</span><span class="pt-language-chip">Српски</span><span class="pt-language-chip">Español</span></div></div><p class="pt-language-note">Если нужен другой язык, можно самостоятельно создать словарь перевода для любого языка и подключить его к программе.</p></div>
@@ -1032,7 +1065,8 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
 
         <div class="card">
           <h3>3D visualization</h3>
-          <p>A clear diagram for warehouse workers. Even and odd stacking layers are displayed in different colors. Each layer can be rotated 180 degrees relative to adjacent layers for more secure stacking (layer linking).
+          <p>A clear diagram for warehouse workers. Even and odd stacking layers are displayed in different colors. The user can choose colors for odd layers, even layers and the pallet via an extended color picker. Each layer can be rotated 180 degrees relative to adjacent layers for more secure stacking (layer linking).
+                The new layer view mode displays one odd and one even layer separately, without the pallet or overlay text, making it easier to inspect layer linking and rotation.
                 A text block with optimal stacking parameters can be added to the diagram. The diagram can be copied to the clipboard and pasted into any office document (Word, Excel, PowerPoint).</p>
         </div>
 
@@ -1069,6 +1103,17 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
 
       <div class="fullshot monitoring-shot">
         <img src="boxpalletizer-monitoring-en.jpg" alt="Palletizer PRO watch mode and automatic JSON calculation">
+      </div>
+
+      <div class="feature-shot-grid" aria-label="New Box Palletizer visualization features">
+        <figure>
+          <img src="boxpalletizer-layer-colors-en.png" alt="Layer and pallet color settings in Box Palletizer">
+          <figcaption>Custom colors for odd layers, even layers and the pallet.</figcaption>
+        </figure>
+        <figure>
+          <img src="boxpalletizer-layer-view-en.png" alt="Odd and even layer view mode in Box Palletizer">
+          <figcaption>Layer view mode: odd and even layers are shown separately.</figcaption>
+        </figure>
       </div>
 
       <div class="pt-language-card"><div class="pt-language-copy"><h2>Multilingual interface</h2><p>Box Palletizer already ships with interface dictionaries for ten languages. Language switching helps deploy the program in mixed teams and production sites with different working languages.</p><div class="pt-language-chips" aria-label="Supported languages"><span class="pt-language-chip">Русский</span><span class="pt-language-chip">English</span><span class="pt-language-chip">Deutsch</span><span class="pt-language-chip">Français</span><span class="pt-language-chip" dir="rtl">עברית</span><span class="pt-language-chip">Italiano</span><span class="pt-language-chip">Қазақша</span><span class="pt-language-chip">Português</span><span class="pt-language-chip">Српски</span><span class="pt-language-chip">Español</span></div></div><p class="pt-language-note">If another language is needed, you can create your own translation dictionary for any language and connect it to the program.</p></div>
