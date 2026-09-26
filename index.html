@@ -205,6 +205,10 @@ section{padding:52px 0}
 .deployment-logo.stellar{background:#000}
 .deployment-nav{display:inline-block;color:var(--text);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-weight:700}
 .deployment-nav:hover{border-color:var(--accent)}
+.section-nav{order:3;flex:1 0 100%;display:flex;gap:8px;overflow-x:auto;padding:4px 0 8px}
+.section-nav a{flex:0 0 auto;white-space:nowrap}
+.section-nav a[hidden]{display:none}
+section[id]{scroll-margin-top:var(--header-offset,180px)}
 h1,h2,h3{margin:0 0 12px}
 p{margin:0 0 12px;color:var(--muted)}
 ul{margin:0 0 12px 18px;color:var(--muted)}
@@ -444,7 +448,20 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
         </div>
       </a>
 
-      <nav aria-label="Навигация"><a class="deployment-nav" id="deployment-nav" href="#ru-deployment">Внедрение</a></nav>
+      <nav class="section-nav" aria-label="Разделы сайта">
+        <a class="deployment-nav" href="#ru-overview" data-nav-ru="О программе" data-nav-en="About" data-target-ru="ru-overview" data-target-en="en-overview">О программе</a>
+        <a class="deployment-nav" href="#ru-damage" data-nav-ru="Риски" data-nav-en="Risks" data-target-ru="ru-damage" data-target-en="en-damage">Риски</a>
+        <a class="deployment-nav" href="#ru-work" data-nav-ru="В работе" data-nav-en="In use" data-target-ru="ru-work" data-target-en="en-work">В работе</a>
+        <a class="deployment-nav" href="#ru-bundles" data-nav-ru="Задачи" data-nav-en="Tasks" data-target-ru="ru-bundles" data-target-en="en-bundles">Задачи</a>
+        <a class="deployment-nav" href="#ru-features" data-nav-ru="Возможности" data-nav-en="Features" data-target-ru="ru-features" data-target-en="en-features">Возможности</a>
+        <a class="deployment-nav" href="#ru-price" data-nav-ru="Цены" data-nav-en="Pricing" data-target-ru="ru-price" data-target-en="en-pricing">Цены</a>
+        <a class="deployment-nav" href="#buy" data-nav-ru="Как купить" data-nav-en="" data-target-ru="buy" data-target-en="">Как купить</a>
+        <a class="deployment-nav" href="#ru-presentation" data-nav-ru="Презентация" data-nav-en="" data-target-ru="ru-presentation" data-target-en="">Презентация</a>
+        <a class="deployment-nav" href="#ru-demo" data-nav-ru="Демо" data-nav-en="Demo" data-target-ru="ru-demo" data-target-en="en-demo">Демо</a>
+        <a class="deployment-nav" href="#ru-deployment" data-nav-ru="Внедрение" data-nav-en="Deployment" data-target-ru="ru-deployment" data-target-en="en-deployment">Внедрение</a>
+        <a class="deployment-nav" href="#ru-reviews" data-nav-ru="Отзывы" data-nav-en="Reviews" data-target-ru="ru-reviews" data-target-en="en-reviews">Отзывы</a>
+        <a class="deployment-nav" href="#ru-other-programs" data-nav-ru="Другие программы" data-nav-en="Other software" data-target-ru="ru-other-programs" data-target-en="en-other-programs">Другие программы</a>
+      </nav>
       <div class="lang" aria-label="Language switcher">
         <button id="btn-ru" type="button">Русский</button>
         <button id="btn-en" type="button">English</button>
@@ -461,7 +478,7 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
 <main id="top" data-lang="ru">
 
   <!-- HERO -->
-  <section>
+  <section id="ru-overview">
     <div class="container grid2">
       <div class="card">
         <h1>Паллетировщик Box Palletizer<br>для расчета укладки коробок на паллеты</h1>
@@ -527,7 +544,7 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
   </section>
 
   <!-- FULL WIDTH SCREENSHOT -->
-  <section>
+  <section id="ru-work">
     <div class="container">
       <h2>Как это выглядит в реальной работе</h2>
       <p>Крупная, наглядная схема укладки: слои, ориентация, итоговые параметры — всё видно сразу.</p>
@@ -599,7 +616,7 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
   </section>
 
   <!-- FEATURES -->
-  <section>
+  <section id="ru-features">
     <div class="container">
       <h2>Ключевые возможности</h2>
       <div class="grid3">
@@ -737,7 +754,7 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
     </div>
   </section>
 
-  <section class="purchase-guide smart-lang-ru" id="buy">
+  <section id="buy" class="purchase-guide smart-lang-ru">
     <div class="purchase-guide-wrap">
       <div class="purchase-guide-head"><h2>Как купить</h2><p>Лицензия подготавливается для конкретного компьютера. Выполните шесть шагов, чтобы получить персональный дистрибутив.</p></div>
       <ol class="purchase-guide-grid">
@@ -752,7 +769,7 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
   </section>
 
   <!-- CTA -->
-   <section>
+   <section id="ru-presentation">
     <div class="container card">
       <h2>Презентация программы</h2>
       <p>
@@ -766,7 +783,7 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
   </section>
 
 
-  <section>
+  <section id="ru-demo">
     <div class="container card">
       <h2>Скачайте демоверсию</h2>
       <p>
@@ -817,7 +834,7 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
   </section>
 
   <!-- OTHER PRODUCTS (RU) -->
-  <section class="smart-related" id="other-programs" data-smart-related>
+  <section id="ru-other-programs" class="smart-related" data-smart-related>
   <div class="smart-related-wrap">
     <div class="smart-lang-ru">
   <div class="smart-related-head">
@@ -908,7 +925,7 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
 <main data-lang="en" class="hidden">
 
   <!-- HERO -->
-  <section>
+  <section id="en-overview">
     <div class="container grid2">
       <div class="card">
         <h1>Stop losing money<br>on crushed boxes and claims</h1>
@@ -976,7 +993,7 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
   </section>
 
   <!-- FULL WIDTH SCREENSHOT -->
-  <section>
+  <section id="en-work">
     <div class="container">
       <h2>How it looks in real work</h2>
       <p>A large, clear pallet visualization showing layers, orientation and calculated parameters.</p>
@@ -1048,7 +1065,7 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
   </section>
 
   <!-- FEATURES -->
-  <section>
+  <section id="en-features">
     <div class="container">
       <h2>Key features</h2>
       <div class="grid3">
@@ -1179,7 +1196,7 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
     </div>
   </section>
 
-  <!-- CTA --><section>
+  <!-- CTA --><section id="en-demo">
     <div class="container card">
       <h2>Download the demo</h2>
       <p>
@@ -1229,7 +1246,7 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
   </section>
 
   <!-- OTHER PRODUCTS (EN) -->
-  <section class="smart-related" id="other-programs" data-smart-related>
+  <section id="en-other-programs" class="smart-related" data-smart-related>
   <div class="smart-related-wrap">
     <div class="smart-lang-ru">
   <div class="smart-related-head">
@@ -1326,6 +1343,10 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
 
 <script>
 (function () {
+  const header = document.querySelector(".topbar");
+  new ResizeObserver(() => {
+    document.documentElement.style.setProperty("--header-offset", (header.offsetHeight + 16) + "px");
+  }).observe(header);
   const RU = "ru";
   const EN = "en";
 
@@ -1344,9 +1365,12 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
 
   function setMetaForLang(lang){
     document.documentElement.lang = lang;
-    const deploymentNav = document.getElementById("deployment-nav");
-    deploymentNav.textContent = lang === RU ? "Внедрение" : "Deployment";
-    deploymentNav.href = lang === RU ? "#ru-deployment" : "#en-deployment";
+    document.querySelectorAll(".section-nav a").forEach(link => {
+      const target = link.getAttribute("data-target-" + lang);
+      link.hidden = !target;
+      link.textContent = link.getAttribute("data-nav-" + lang);
+      link.href = "#" + target;
+    });
     const meta = (lang === RU)
       ? {
           title: "Паллетировщик Box Palletizer — программа расчета укладки коробок на паллеты",
