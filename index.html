@@ -198,6 +198,13 @@ body{
 }
 .container{max-width:1200px;margin:auto;padding:0 20px}
 section{padding:52px 0}
+.deployment-section{scroll-margin-top:110px}
+.deployment-list{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:16px}
+.deployment-item{display:flex;align-items:center;gap:16px;min-height:52px;color:var(--text)}
+.deployment-logo{width:112px;height:48px;flex:0 0 112px;object-fit:contain;border-radius:8px;border:1px solid var(--line);background:#fff;padding:4px}
+.deployment-logo.stellar{background:#000}
+.deployment-nav{display:inline-block;color:var(--text);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-weight:700}
+.deployment-nav:hover{border-color:var(--accent)}
 h1,h2,h3{margin:0 0 12px}
 p{margin:0 0 12px;color:var(--muted)}
 ul{margin:0 0 12px 18px;color:var(--muted)}
@@ -318,7 +325,7 @@ html.day-theme .topbar{
 }
 .topbar .inner{
   display:flex; align-items:center; justify-content:space-between;
-  gap:14px; padding:12px 0;
+  gap:14px; padding:12px 0; flex-wrap:wrap;
 }
 .site-banner{
   height:190px;
@@ -437,6 +444,7 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
         </div>
       </a>
 
+      <nav aria-label="Навигация"><a class="deployment-nav" id="deployment-nav" href="#ru-deployment">Внедрение</a></nav>
       <div class="lang" aria-label="Language switcher">
         <button id="btn-ru" type="button">Русский</button>
         <button id="btn-en" type="button">English</button>
@@ -770,6 +778,19 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
 
       <a class="btn primary" href="https://mega.nz/file/WpIAiTRD#ALKEDjftp0NJJr70wjKfOxUuWR4e6igbRpLx_3mtdkk" target="_blank" rel="noopener">Скачать демо</a>
       <a class="btn secondary" href="mailto:vguberniev@gmail.com">Написать разработчику</a>
+    </div>
+  </section>
+
+  <section id="ru-deployment" class="deployment-section">
+    <div class="container">
+      <div class="card">
+        <h2>Внедрение</h2>
+        <p>Программа «Паллетировщик» используется в компаниях:</p>
+        <ul class="deployment-list">
+          <li class="deployment-item"><img class="deployment-logo" src="assets/deployment/paksistem.png" alt="Логотип Паксистем" width="112" height="48" loading="lazy"><span>Паксистем</span></li>
+          <li class="deployment-item"><img class="deployment-logo stellar" src="assets/deployment/stellar-group.png" alt="Логотип STELLAR GROUP" width="112" height="48" loading="lazy"><span>STELLAR GROUP</span></li>
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -1170,6 +1191,19 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
     </div>
   </section>
 
+  <section id="en-deployment" class="deployment-section">
+    <div class="container">
+      <div class="card">
+        <h2>Deployment</h2>
+        <p>Palletizer is used by the following companies:</p>
+        <ul class="deployment-list">
+          <li class="deployment-item"><img class="deployment-logo" src="assets/deployment/paksistem.png" alt="Paksistem logo" width="112" height="48" loading="lazy"><span>Paksistem</span></li>
+          <li class="deployment-item"><img class="deployment-logo stellar" src="assets/deployment/stellar-group.png" alt="STELLAR GROUP logo" width="112" height="48" loading="lazy"><span>STELLAR GROUP</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <section id="en-reviews">
     <div class="container">
       <h2>Reviews</h2>
@@ -1306,6 +1340,9 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
 
   function setMetaForLang(lang){
     document.documentElement.lang = lang;
+    const deploymentNav = document.getElementById("deployment-nav");
+    deploymentNav.textContent = lang === RU ? "Внедрение" : "Deployment";
+    deploymentNav.href = lang === RU ? "#ru-deployment" : "#en-deployment";
     const meta = (lang === RU)
       ? {
           title: "Паллетировщик Box Palletizer — программа расчета укладки коробок на паллеты",
