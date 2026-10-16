@@ -208,7 +208,7 @@ section{padding:52px 0}
 .section-nav{min-width:0;display:flex;flex-wrap:wrap;gap:5px;padding:12px 0}
 .section-nav a{flex:0 0 auto;white-space:nowrap}
 .section-nav a[hidden]{display:none}
-section[id]{scroll-margin-top:var(--header-offset,180px)}
+section[id],#ru-transport-package,#en-transport-package{scroll-margin-top:var(--header-offset,180px)}
 h1,h2,h3{margin:0 0 12px}
 p{margin:0 0 12px;color:var(--muted)}
 ul{margin:0 0 12px 18px;color:var(--muted)}
@@ -596,9 +596,7 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
             Вводятся длина, ширина и высота пачки, количество ящиков в пачке и объём заказа.
             На выходе — число пачек и ящиков на поддоне, количество слоёв, габариты пакета
             и требуемое количество поддонов.
-            Для транспортного пакета можно выбрать тип заготовки: ящик/лоток, прокладку, продольную
-            или поперечную перегородку. Расчёт учитывает количество изделий в комплекте и пачке,
-            профиль гофрокартона и транзитную норму отгрузки.
+            </p><p><b>Расчёт транспортного пакета:</b> ящики/лотки, прокладки, продольные и поперечные перегородки.</p><ul><li>Количество изделий в комплекте и пачке.</li><li>Профиль гофрокартона и транзитная норма отгрузки.</li></ul><p>Результаты для изделий комплекта сводятся в общую таблицу.
           </p>
         </article>
       </div>
@@ -676,15 +674,15 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
     отчёт автоматически заполняется рассчитанными данными.
   </p>
   <p>
-    Для транспортного пакета формируется технологическая карта паллетировки и загрузки в контейнер: состав комплекта, транзитные нормы отгрузки, количество изделий в пачке и на поддоне, размеры и высота паллет, их цвет на схеме. В карте показаны отдельные паллеты и общая схема загрузки с размерами кузова и числом поддонов.</p>
+    <b>Технологическая карта паллетировки и загрузки в контейнер</b> объединяет:</p><ul><li>Состав комплекта и транзитные нормы отгрузки.</li><li>Количество изделий в пачке и на поддоне, размеры и высоту паллет.</li><li>Изображения отдельных паллет и цветную схему загрузки.</li><li>Размеры кузова и общее количество поддонов.</li></ul><p>Карта помогает передать согласованную схему укладки и загрузки на производство и склад.</p>
   <p>Это удобно для передачи схем укладки в производство,
     логистику или заказчику без ручного оформления.
   </p>
 </div>
 
         <div class="card">
-          <h3>Гибкие параметры</h3>
-          <p>Любые размеры ящиков/поддонов, ограничения по высоте/весу, свесы, нестандартная тара.</p><p id="ru-transport-package">В режиме «Транспортный пакет» задаются размеры контейнера или кузова. В общей таблице собраны изделия комплекта, количество пачек и изделий на поддоне, габариты паллет со свесами и число поддонов в контейнере. 3D-схема показывает совместную загрузку паллет разных изделий; их цвета соответствуют строкам таблицы.</p>
+          <h3>Параметры паллет и загрузка контейнера</h3>
+          <p>Любые размеры ящиков/поддонов, ограничения по высоте/весу, свесы, нестандартная тара.</p><p id="ru-transport-package"><b>Транспортный пакет — от поддона до контейнера.</b></p><ul><li>Задайте размеры контейнера или кузова.</li><li>Рассчитайте совместную загрузку паллет с разными изделиями комплекта.</li><li>Сравните количество пачек и изделий, габариты паллет со свесами и число поддонов в общей таблице.</li><li>Проверьте загрузку на 3D-схеме: цвета паллет соответствуют строкам таблицы.</li></ul><p>Все результаты видны вместе — от параметров отдельного пакета до общей загрузки контейнера.</p>
         </div>
         <div class="card">
           <h3>Palletizer PRO: режим дежурства</h3>
@@ -706,8 +704,8 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
       </div>
 
       <div class="feature-shot-grid">
-        <figure><a href="tranpak.png" target="_blank" rel="noopener"><img src="tranpak.png" alt="Транспортный пакет: расчёт паллет и схема загрузки контейнера. Цвета соответствуют изделиям в таблице." width="1155" height="976" style="height:auto" style="height:auto" loading="lazy"></a><figcaption>Транспортный пакет: расчёт паллет и схема загрузки контейнера. Цвета соответствуют изделиям в таблице.</figcaption></figure>
-        <figure><a href="tranpak2.png" target="_blank" rel="noopener"><img src="tranpak2.png" alt="Технологическая карта: состав комплекта, параметры паллет и общая схема загрузки контейнера." width="1034" height="790" style="height:auto" style="height:auto" loading="lazy"></a><figcaption>Технологическая карта: состав комплекта, параметры паллет и общая схема загрузки контейнера.</figcaption></figure>
+        <figure><a href="tranpak.png" target="_blank" rel="noopener"><img src="tranpak.png" alt="Транспортный пакет: расчёт паллет и схема загрузки контейнера. Цвета соответствуют изделиям в таблице." width="1155" height="976" style="height:auto" loading="lazy"></a><figcaption>Транспортный пакет: расчёт паллет и схема загрузки контейнера. Цвета соответствуют изделиям в таблице.</figcaption></figure>
+        <figure><a href="tranpak2.png" target="_blank" rel="noopener"><img src="tranpak2.png" alt="Технологическая карта: состав комплекта, параметры паллет и общая схема загрузки контейнера." width="1034" height="790" style="height:auto" loading="lazy"></a><figcaption>Технологическая карта: состав комплекта, параметры паллет и общая схема загрузки контейнера.</figcaption></figure>
       </div>
 
       <div class="fullshot monitoring-shot">
@@ -1135,7 +1133,7 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
         </div>
 
         <div class="card">
-          <h3>Flexible parameters</h3>
+          <h3>Pallet parameters and container loading</h3>
           <p>Any box/pallet sizes, height/weight limits, overhang settings and non-standard packaging.</p><p id="en-transport-package">Transport Package mode accepts container or truck body dimensions. A shared table lists set components, bundles and items per pallet, loaded pallet dimensions including overhang, and pallets per container. The 3D view shows mixed loads, with pallet colors matching the table rows.</p>
         </div>
         <div class="card">
@@ -1158,8 +1156,8 @@ html[data-theme="day"] .smart-related-card,html.day-theme .smart-related-card{ba
       </div>
 
       <div class="feature-shot-grid">
-        <figure><a href="tranpak.png" target="_blank" rel="noopener"><img src="tranpak.png" alt="Transport Package: pallet calculations and container loading. Colors match the components in the table (Russian interface)." width="1155" height="976" style="height:auto" style="height:auto" loading="lazy"></a><figcaption>Transport Package: pallet calculations and container loading. Colors match the components in the table (Russian interface).</figcaption></figure>
-        <figure><a href="tranpak2.png" target="_blank" rel="noopener"><img src="tranpak2.png" alt="Process sheet with set components, pallet parameters and the complete container loading diagram (Russian report)." width="1034" height="790" style="height:auto" style="height:auto" loading="lazy"></a><figcaption>Process sheet with set components, pallet parameters and the complete container loading diagram (Russian report).</figcaption></figure>
+        <figure><a href="tranpak.png" target="_blank" rel="noopener"><img src="tranpak.png" alt="Transport Package: pallet calculations and container loading. Colors match the components in the table (Russian interface)." width="1155" height="976" style="height:auto" loading="lazy"></a><figcaption>Transport Package: pallet calculations and container loading. Colors match the components in the table (Russian interface).</figcaption></figure>
+        <figure><a href="tranpak2.png" target="_blank" rel="noopener"><img src="tranpak2.png" alt="Process sheet with set components, pallet parameters and the complete container loading diagram (Russian report)." width="1034" height="790" style="height:auto" loading="lazy"></a><figcaption>Process sheet with set components, pallet parameters and the complete container loading diagram (Russian report).</figcaption></figure>
       </div>
 
       <div class="fullshot monitoring-shot">
